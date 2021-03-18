@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:syncfusion="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:ChartSample"
+             x:Class="ChartSample.MainPage">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout Margin="30">
+        <syncfusion:SfChart BackgroundColor="#2a3666"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <syncfusion:SfChart.PrimaryAxis>
+                <syncfusion:CategoryAxis LabelPlacement="BetweenTicks" ShowMajorGridLines="False">
+                    <syncfusion:CategoryAxis.MajorTickStyle>
+                        <syncfusion:ChartAxisTickStyle TickSize="0"/>
+                    </syncfusion:CategoryAxis.MajorTickStyle>
+                    <syncfusion:CategoryAxis.LabelStyle>
+                        <syncfusion:ChartAxisLabelStyle TextColor="White"/>
+                    </syncfusion:CategoryAxis.LabelStyle>
+                </syncfusion:CategoryAxis>
+            </syncfusion:SfChart.PrimaryAxis>
+            <syncfusion:SfChart.SecondaryAxis>
+                <syncfusion:NumericalAxis EdgeLabelsDrawingMode="Fit" ShowMinorGridLines="False" ShowMajorGridLines="False" >
+                    <syncfusion:NumericalAxis.MajorTickStyle>
+                        <syncfusion:ChartAxisTickStyle TickSize="0"/>
+                    </syncfusion:NumericalAxis.MajorTickStyle>
+                    <syncfusion:NumericalAxis.LabelStyle>
+                        <syncfusion:ChartAxisLabelStyle TextColor="White"/>
+                    </syncfusion:NumericalAxis.LabelStyle>
+                </syncfusion:NumericalAxis>
+            </syncfusion:SfChart.SecondaryAxis>
+            <syncfusion:FastLineSeries ItemsSource="{Binding Data}" Color="#719daa" StrokeWidth="4" XBindingPath="XValue" YBindingPath="YValue1">
+                <syncfusion:FastLineSeries.StrokeDashArray>
+                    <x:Array Type="{x:Type x:Double}">
+                        <x:Double>3</x:Double>
+                        <x:Double>2</x:Double>
+                    </x:Array>
+                </syncfusion:FastLineSeries.StrokeDashArray>
+            </syncfusion:FastLineSeries>
+            <syncfusion:FastLineSeries ItemsSource="{Binding Data}" Color="#f25959" StrokeWidth="4" XBindingPath="XValue" YBindingPath="YValue2">
+                <syncfusion:FastLineSeries.StrokeDashArray>
+                    <x:Array Type="{x:Type x:Double}">
+                        <x:Double>1</x:Double>
+                        <x:Double>2</x:Double>
+                    </x:Array>
+                </syncfusion:FastLineSeries.StrokeDashArray>
+            </syncfusion:FastLineSeries>
+            <syncfusion:FastLineSeries ItemsSource="{Binding Data}" Color="#d8d79b"  StrokeWidth="4" XBindingPath="XValue" YBindingPath="YValue3">
+                <syncfusion:FastLineSeries.StrokeDashArray>
+                    <x:Array Type="{x:Type x:Double}">
+                        <x:Double>10</x:Double>
+                        <x:Double>1</x:Double>
+                    </x:Array>
+                </syncfusion:FastLineSeries.StrokeDashArray>
+            </syncfusion:FastLineSeries>
+          
+        </syncfusion:SfChart>
+    </StackLayout>
+
+</ContentPage>
