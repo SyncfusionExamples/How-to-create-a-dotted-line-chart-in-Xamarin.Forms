@@ -1,2 +1,4 @@
 # How to create a dotted line chart in Xamarin.Forms
-This demo sample explains how to create a dotted line chart in Xamarin.Forms
+A [line chart in Xamarin.Forms](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts/chart-types/line-chart) displays an information as a series of data points which is connected by straight line segments. [Xamarin.Forms Chart](https://help.syncfusion.com/xamarin/charts/getting-started) provides a support to create a dotted line chart using the inbuild API named [StrokeDashArray](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.FastLineSeries.html#Syncfusion_SfChart_XForms_FastLineSeries_StrokeDashArray) property. To know more about this, please refer this [article](https://www.syncfusion.com/kb/5924/?utm_medium=listing&utm_source=github-examples).
+
+![](https://github.com/SyncfusionExamples/How-to-create-a-dotted-line-chart-in-Xamarin.Forms/blob/main/Dotted-Line-Chart.png)
